@@ -12,6 +12,7 @@ export async function getUser(){
   }
   const response = await fetch(`http://localhost:8000/600/users/${browserData.cbid}`, requestOptions);
   if(!response.ok){
+    // eslint-disable-next-line
       throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
@@ -26,6 +27,7 @@ export async function getUserOrders(){
   }
   const response = await fetch(`http://localhost:8000/660/orders?user.id=${browserData.cbid}`, requestOptions);
   if(!response.ok){
+    // eslint-disable-next-line
       throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
@@ -51,6 +53,7 @@ export async function createOrder(cartList, total, user){
   }
   const response = await fetch("http://localhost:8000/660/orders", requestOptions);
   if(!response.ok){
+    // eslint-disable-next-line
       throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();

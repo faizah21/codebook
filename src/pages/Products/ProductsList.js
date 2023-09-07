@@ -28,7 +28,8 @@ export const ProductsList = () => {
       //Api call to get access to all products
     }
     fetchProducts();
-  }, [searchTerm]);  //esLint-disable-Line
+    // eslint-disable-next-line
+  }, [searchTerm]); //esLint-disable-Line
 
   return (
     // Info about e-books
